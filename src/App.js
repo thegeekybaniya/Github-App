@@ -1,21 +1,23 @@
 import React from 'react';
+import GitHubLogin from 'react-github-login';
 
+const handleSocialLogin = (user) => {
+  console.log(user)
+}
+
+const handleSocialLoginFailure = (err) => {
+  console.error(err)
+}
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <GitHubLogin
+
+          clientId='7721be539451c5deef96'
+          onLoginSuccess={handleSocialLogin}
+          onLoginFailure={handleSocialLoginFailure}      >
+        Login with Github
+      </GitHubLogin>
     </div>
   );
 }
