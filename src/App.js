@@ -2,7 +2,8 @@ import React from 'react';
 import GitHubLogin from 'react-github-login';
 
 const handleSocialLogin = (user) => {
-  console.log(user)
+  console.log(user);
+    alert(user);
 }
 
 const handleSocialLoginFailure = (err) => {
